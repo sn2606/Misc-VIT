@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="q2.js" defer></script>
+    <title>Question 2 19BCE0977</title>
+</head>
+
+<body>
+    <form id="q2">
+        <table>
+            <tr>
+                <td>Full Name</td>
+                <td><input type="text" name="full-name" id="full-name"></td>
+                <td id="fn-inc">Format: FirstName, LastName</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" name="email" id="email"></td>
+                <td id="em-inc"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="pwd" id="pwd"></td>
+                <td id="pwd-inc">Only a-z A-Z 0-9 @ ! allowed</td>
+            </tr>
+            <tr>
+                <td>Date of Birth</td>
+                <td><input type="text" placeholder="mm/dd/yyyy" name="dob" id="dob"></td>
+                <td id="dob-inc"></td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td><input type="text" name="country" id="country"></td>
+                <td id="cnt-inc">First letter should be capital</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Unknown</label>
+                </td>
+                <td id="gen-inc"></td>
+            </tr>
+            <tr>
+                <td>Meal Preference</td>
+                <td>
+                    <input type="checkbox" id="low-cal" name="low-cal" value="Low Calorie">
+                    <label for="low-cal"> Low Calorie</label><br>
+                    <input type="checkbox" id="low-salt" name="low-salt" value="Low Salt">
+                    <label for="low-salt"> Low Salt</label><br>
+                </td>
+                <td id="meal-pref"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="checkbox" id="terms" name="terms" value="Terms">
+                    <label for="terms"> I Accept Terms</label><br>
+                </td>
+                <td id="terms-inc"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" id="register" value="Register"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

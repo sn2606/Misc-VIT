@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Q5 19BCE0977</title>
+    <meta name="description" content="Online Greetings Designer: Question 5 Cycle Sheet 2 done by 19BCE0977">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="5.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@400;500;600;700&family=Nunito:wght@400;600;700&family=Raleway:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="5.js" defer></script>
+</head>
+
+<body>
+    <section id="greeting-card">
+        <div id="greeting-text">
+            <p id="heading">Sincere Greetings</p>
+            <p id="in-text">Hello World</p>
+            <p id="signature">From Y/N</p>
+        </div>
+        <div id="image">
+            <img src="pexels-life-of-pix-8218.jpg" alt="city img" id="greet-img">
+        </div>
+    </section>
+
+    <section id="options">
+        <div class="image-change">
+            <input type="file" accept="image/*" name="file" id="get-photo" onchange="changeImage(this);">
+            <p>Image Alignment:</p>
+            <input type="radio" name="alignment" id="left-align">Left <br>
+            <input type="radio" name="alignment" id="right-align">Right <br>
+            <input type="radio" name="alignment" id="background">Background <br>
+        </div>
+        <div class="font-change">
+            <p>Select font style:</p>
+            <select name="font-style" id="font-style">
+                <option>Times New Roman</option>
+                <option>Arial</option>
+                <option>Veranda</option>
+                <option>Montserrat</option>
+                <option>Raleway</option>
+                <option>Nunito</option>
+                <option>Merriweather</option>
+            </select>
+            <p>Select font size:</p>
+            <select name="font-size" id="font-size">
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+            </select>
+            <p>Select font color:</p>
+            <select name="font-color" id="font-color">
+                <option>Blue</option>
+                <option>Green</option>
+                <option>Violet</option>
+                <option>Red</option>
+                <option>Black</option>
+                <option>Magenta</option>
+            </select>
+            <table>
+                <tr>
+                    <td>Enter title text:</td>
+                    <td><input type="text" name="heading-text" id="heading-text"></td>
+                    <td><button id="change1">Change</button></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td>Enter greeting text:</td>
+                    <td><input type="text" name="greet-text" id="greet-text"></td>
+                    <td><button id="change2">Change</button></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td>Enter signature text:</td>
+                    <td><input type="text" name="signature-text" id="signature-text"></td>
+                    <td><button id="change3">Change</button></td>
+                </tr>
+            </table>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

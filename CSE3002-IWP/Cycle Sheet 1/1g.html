@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>HTML EXERCISES 1G</title>
+        <meta name="description" content="C Code as it is">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <pre>
+                # include < stdio.h >
+                # include < stdlib.h >
+                
+                int maxSumIS(int *arr, int n);
+                
+                int main()
+                {
+                    int n, max, i; //sum, max, i, j, prev;
+                    int *a;
+                    
+                    scanf("%d", &n);
+                    
+                    a = (int *)malloc(n * sizeof(int));
+                    
+                    for(i = 0; i < n; i++)
+                    {
+                        scanf("%d", a+i);
+                    }
+                    
+                    max = maxSumIS(a, n);
+                    
+                    printf("%d", max);
+                    
+                    return 0;
+                }
+                
+                
+                int maxSumIS(int *arr, int n) 
+                { 
+                    int i, j, max = 0; 
+                    int *msis; 
+                
+                    msis = (int *)malloc(n * sizeof(int));
+                
+                    for ( i = 0; i < n; i++ )
+                    { 
+                        msis[i] = arr[i];
+                    }
+                
+                    for ( i = 1; i < n; i++ ) 
+                    {
+                        for ( j = 0; j < i; j++ ) 
+                        {
+                            if (arr[i] > arr[j] && msis[i] < msis[j] + arr[i]) 
+                            {    
+                                msis[i] = msis[j] + arr[i];
+                            }
+                        }
+                    }
+                    
+                    for ( i = 0; i < n; i++ )
+                    { 
+                        if ( max < msis[i] )
+                        { 
+                            max = msis[i];
+                        }
+                    }
+                
+                    return max; 
+                }             
+                
+        </pre>
+    </body>
+</html>

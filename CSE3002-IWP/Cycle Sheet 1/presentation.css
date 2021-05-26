@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+}
+
+
+.Presentation {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.Top-Box {
+    border: 1px solid black;
+    background-image: url('C:\\Users\\S K Nayak\\Pictures\\pink-sky.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    flex: 0 1 auto;
+    text-align: center;
+    margin: 5px;
+}
+
+.Container {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    height: 100%;
+    width: 100%;
+}
+
+.Nav-Box {
+    border: 1px solid black;
+    /* display: flexbox; */
+    flex: 1;
+    flex-basis: 30%;
+    margin: 5px;
+    padding: 3%;
+    background-color: lightyellow;
+}
+
+.Nav-Links {
+    display: inline-block;
+    margin: 5px;
+}
+
+.Nav-Links:hover {
+    background-color: chocolate;
+    color: wheat;
+}
+
+.Content-box h2{
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+
+.Content-box p {
+    margin-top: 0;
+}
+
+.Content-box {
+    border: 1px solid black;
+    /* display: flexbox; */
+    flex: 1;
+    flex-basis: 70%;
+    margin: 5px;
+    padding: 2%;
+}

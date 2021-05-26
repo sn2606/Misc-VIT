@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Q8 19BCE0977</title>
+    <meta name="description" content="Question 8 Cycle Sheet 2 done by 19BCE0977">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="7.js" defer></script>
+</head>
+
+<body>
+    <p id="account-no">Account Number: </p>
+    <p id="credit-limit">Credit Limit: </p>
+    <p id="beginning-balance">Beginning Balance: </p>
+    <p id="charges">Charges this month: </p>
+    <p id="credits">Credits this month: </p>
+    <p id="new-balance">New Balance: </p>
+    <p id="msg"></p>
+    <script type="text/javascript">
+        var acc = parseInt(prompt("Enter the account number:"));
+        document.getElementById("account-no").innerHTML += acc.toString();
+
+        var creditLimit = parseInt(prompt("Enter credit limit on the account:"));
+        document.getElementById("credit-limit").innerHTML += creditLimit.toString();
+        
+        var balance = parseInt(prompt("Enter balance at the beginning of the month:"));
+        document.getElementById("beginning-balance").innerHTML += balance.toString();
+        
+        var charges = parseInt(prompt("Enter total of all items charged this month:"));
+        document.getElementById("charges").innerHTML += charges.toString();
+        
+        var credits = parseInt(prompt("Enter total of all credits applied to account this month:"));
+        document.getElementById("credits").innerHTML += credits.toString();
+        
+        var newBalance = balance + charges - credits;
+        document.getElementById("new-balance").innerHTML += newBalance.toString();
+
+        if(newBalance > creditLimit){
+            document.getElementById("msg").innerHTML = "Credit Limit Exceeded";
+        }
+    </script>
+</body>
+
+</html>

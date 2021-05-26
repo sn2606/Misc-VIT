@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1 19BCE0977</title>
+</head>
+<body>
+    <script>
+        var input;
+        var inparr = [];
+        do {
+            input = prompt("Enter a number:");
+            if(!(input === null)){
+                inparr.push(input);
+            }
+        }while(!(input === null));
+        for(var i = 0; i < inparr.length; i++){
+            inparr[i] = parseInt(inparr[i]);
+            for(var j = 0; j < inparr[i]; j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>

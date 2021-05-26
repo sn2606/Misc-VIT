@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Q10 19BCE0977</title>
+    <meta name="description" content="Question 10 Cycle Sheet 2 done by 19BCE0977">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <h1>Validate Credit Cards</h1>
+
+    <label for="credit-card">Credit Card:</label>
+    <select name="credit-card" id="credit-card">
+        <option value="initial">-- Select --</option>
+        <option value="american-express">American Express</option>
+        <option value="diners-club">Diners Club</option>
+        <option value="discover">Discover</option>
+        <option value="jcb">JCB</option>
+        <option value="master-card">MasterCard</option>
+        <option value="visa">Visa</option>
+    </select>
+    
+    <br>
+
+    <label for="card-no">Card Number: </label>
+    <input type="text" name="card-no" id="card-no">
+    <br>
+
+    <input type="button" value="Validate" id="validate">
+    <br>
+
+    <p id="result"></p>
+
+    <script type="text/javascript">
+        var cc = document.getElementById("credit-card");
+        var no;
+        var val = document.getElementById("validate");
+        var ind;
+        cc.addEventListener("change", function(){
+            ind = cc.selectedIndex;
+        })
+
+        function validate() {
+            no = document.getElementById("card-no");
+            var cn = no.value;
+            var regexp;
+            switch(ind){
+                case 1:
+                    regexp = /^3[47]/;
+                    if(cn.length == 15 && regexp.test(cn)){
+                        return true;
+                    }else{
+                        return false;
+                    }
+                    break;
+                case 2:
+                    if(cn.length == 14 && (/^30[0-5]/.test(cn) || /^3[68]/.test(cn))){
+                        return true;
+                    }else{
+                        return false;
+                    }
+                    break;
+                case 3:
+                    if(cn.length == 16 && (/^65/.test(cn) || /^6011/.test(cn))){
+                        return true;
+                    }else{
+                        return false;
+                    }
+                    break;
+                case 4:
+                    if(cn.length == 16 && /^35/.test(cn)){
+                        return true;
+                    }else if(cn.length == 15 && (/^2131/.test(cn) || /^1800/.test(cn))){
+                        return true;
+                    }else{
+                        return false;
+                    }
+                    break;
+                case 5:
+                    regexp = /^5[1-5]/;
+                    if(cn.length == 16 && regexp.test(cn)){
+                        return true;
+                    }else{
+                        return false;
+                    }
+                    break;
+                case 6:
+                    regexp = /^4/;
+                    if((cn.length == 16 || cn.length == 13) && regexp.test(cn)){
+                        return true;
+                    }else{
+                        return false;
+                    }
+                    break;
+            }
+        }
+        
+        val.addEventListener("click", function(){
+            if(validate()){
+                document.getElementById("result").innerHTML = "Valid credit card number";
+            }else{
+                document.getElementById("result").innerHTML = "Invalid credit card number";
+            }
+        })
+    </script>
+
+</body>
+
+</html>

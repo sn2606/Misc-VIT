@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #471C47;
+    font-size: 9pt;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}
+
+
+h2 {
+    font-size: 12pt;
+    padding: 10px 0;
+}
+
+.Img {
+    height: 100vh;
+    position: absolute;
+    top: 10;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+}
+
+.rotate-img {
+    margin-top: 30px;
+}
+
+
+.middle-text {
+    /* position: relative; */
+    background-image: url('purple-flower.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 500px;
+    margin-left: 130px;
+    height: 100vh;
+    padding: 0 30px;
+    /* width: 65%; */
+}
+
+.middle-text p {
+    padding-top: 20px;
+}
+
+.middle-text .text {
+    display: inline-block;
+    width: 75%;
+    padding-top: 0;
+}
+
+.middle-text ul {
+    padding-left: 40px;
+}
+
+.middle-text ul li {
+
+    padding: 10px 0;
+}
+
+.middle-text hr {
+    width: 70%;
+    /* padding: 20px; */
+    display: inline-block;
+}
+
+.purple-box {
+    background-color: #A690AF;
+    border: 2px solid #471C47;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    padding: 1em;
+    width: 21em;
+    position: absolute;
+    bottom: 1%;
+    right: 20px;
+}
+
+.purple-box h2 {
+    text-align: right;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.purple-box ul {
+    margin: 10px;
+}

@@ -1,0 +1,51 @@
+body {
+    background-color: gray;
+    align-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.Container {
+    width: auto;
+    vertical-align: top;
+}
+
+.Menu-Items {
+    background-color: black;
+    color: white;
+    margin-right: 3px;
+    padding: 2px 10px;
+}
+
+.Movie-Info {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Information {
+    display: inline-block;
+    width: 40%;
+}
+
+.Poster {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.Rating {
+    color: white;
+    background-color: green;
+    display: inline-block;
+    font-size: 30pt;
+    margin: 5px;
+    padding: 20px;
+    vertical-align: top;
+}

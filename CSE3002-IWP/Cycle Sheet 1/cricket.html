@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Cricket Playground</title>
+        <meta name="description" content="cricket playground players usemap">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="cricket.css">
+    </head>
+    <body>
+
+        <div class="Container">
+            <div class="ImageMap">
+                <img src="cricket.jpg" alt="cricket field image" usemap="#Cricket">
+            </div>
+
+            <div id="Info">
+                <h1>Field Information</h1>
+            </div>            
+        </div>
+        
+        <script>
+            var d = document.getElementById("Info");
+
+            function thirdMan(){
+                d.innerHTML += '<h3>Third Man Position</h3>Favourite Player: Ravindra Jadeja';
+            }
+            function fineLeg(){
+                d.innerHTML += '<h3>Fine Leg Position</h3>Favourite Player: Suresh Raina';
+            }
+            function slip(){
+                d.innerHTML += '<h3>Slip Position</h3>Favourite Player: Rahul Dravid';
+            }
+            function gully(){
+                d.innerHTML += '<h3>Gully Position</h3>Favourite Player: Richie Benaud';
+            }
+            function wicketKeeper(){
+                d.innerHTML += '<h3>Wicket Keeper Position</h3>Favourite Player: M S Dhoni';
+            }
+            function squareLeg(){
+                d.innerHTML += '<h3>Square Leg Position</h3>Favourite Player: Cheteshwar Pujara';
+            }
+            function point(){
+                d.innerHTML += '<h3>Point Position</h3>Favourite Player: Jonty Rhodes';
+            }
+            function cover(){
+                d.innerHTML += '<h3>Cover Position</h3>Favourite Player: Ricky Ponting';
+            }
+            function bowler(){
+                d.innerHTML += '<h3>Bowler Position</h3>Favourite Player: Trent Boult';
+            }
+            function midWicket(){
+                d.innerHTML += '<h3>Mid Wicket Position</h3>Favourite Player: Ben Stokes';
+            }
+            function extraCover(){
+                d.innerHTML += '<h3>Extra Cover Position</h3>Favourite Player: Jasprit Bumrah';
+            }
+            function midOff(){
+                d.innerHTML += '<h3>Mid Off Position</h3>Favourite Player: Hardik Pandya';
+            }
+            function midOn(){
+                d.innerHTML += '<h3>Mid On Position</h3Favourite Player: Shreyas Iyer>';
+            }
+        </script>
+        <map name="Cricket">
+            <area shape="circle" coords="132,60,3" onclick="thirdMan()" alt="ThirdMan">
+            <area shape="circle" coords="353,56,3" onclick="fineLeg()" alt="FineLeg">
+            <area shape="circle" coords="200,92,3" onclick="slip()" alt="slip">
+            <area shape="circle" coords="161,130,3" onclick="gully()" alt="Gully">
+            <area shape="circle" coords="250,120,3" onclick="wicketKeeper()" alt="WicketKeeper">
+            <area shape="circle" coords="407,130,3" onclick="squareLeg()" alt="SquareLeg">
+            <area shape="circle" coords="138,169,3" onclick="point()" alt="Point">
+            <area shape="circle" coords="93,214,3" onclick="cover()" alt="Cover">
+            <area shape="circle" coords="237,260,3" onclick="bowler()" alt="Bowler">
+            <area shape="circle" coords="410,238,3" onclick="midWicket()" alt="MidWicket">
+            <area shape="circle" coords="95,287,3" onclick="extraCover()" alt="ExtraCover">
+            <area shape="circle" coords="134,352,3" onclick="midOff()" alt="MidOff">
+            <area shape="circle" coords="365,350,3" onclick="midOn()" alt="MidOn">
+        </map>
+    </body>
+</html>

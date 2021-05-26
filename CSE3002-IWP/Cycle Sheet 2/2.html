@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Q2 19BCE0977</title>
+    <meta name="description" content="Question 2 Cycle Sheet 2 done by 19BCE0977">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script type="text/javascript">
+        function count(arry) {
+            var c = 0;
+            arry.map((x) => (x > 13 && x < 29 ? c++ : c));        
+            document.write("There are " + c + " numbers that are greater than 13 and less than 29.");
+        }
+
+        var arr = prompt("Enter space-separated values: ").split(" ").map((n) => parseInt(n));
+        console.log(arr);
+        count(arr);
+    </script>
+</body>
+
+</html>

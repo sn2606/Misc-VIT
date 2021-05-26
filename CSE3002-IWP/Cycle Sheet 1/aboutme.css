@@ -1,0 +1,58 @@
+body {
+    background-color: #f8e7b7;
+}
+
+dl {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: larger;
+    font-style: italic;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    font-family: Trebuchet MS;
+}
+
+h4 {
+    text-align: center;
+    color: #b68973;
+}
+
+lh {
+    color: red;
+}
+
+.AboutMe {
+    text-align: center;
+}
+
+.Neighbor {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.Image {
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 2% auto;
+    padding: 2%;
+    width: 30%;    
+}
+
+.Image-Content {
+    align-self: center;
+    margin: auto;
+}
+
+.Images {
+    align-self: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 2% 20%;
+    width: 60%;    
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Q4 19BCE0977</title>
+    <meta name="description" content="Question 4 Cycle Sheet 2 done by 19BCE0977">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script type="text/javascript">
+        function digitSum(n) {
+            var sum = 0;
+            while (n) {
+                var d = n % 10;
+                sum += d * d;
+                n = Math.floor(n / 10);
+            }
+            return sum;
+        }
+
+        var count = 0;
+        var num = 1;
+
+        document.writeln("First five happy numbers are: ");
+        while (count < 5) {
+            var m = num;
+            do {
+                m = digitSum(m);
+            } while (m >= 10)
+
+            if (m == 1) {
+                document.writeln(num, ",");
+                count++;
+            }
+
+            console.log(num, m);
+            num++;
+        }
+    </script>
+</body>
+
+</html>

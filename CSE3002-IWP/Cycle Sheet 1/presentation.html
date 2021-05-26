@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Presentation</title>
+        <meta name="description" content="Presentation Style for web pages">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="presentation.css">
+    </head>
+    <body>
+        <div class="Presentation">
+            <div class="Top-Box">
+                <h1>Java OOP Concepts</h1>
+            </div>
+            <div class="Container">
+                <div class="Nav-Box">
+                    <h3>Navigation Box</h3>
+                    <a class="Nav-Links" href="https://beginnersbook.com/2013/04/oops-concepts/">Page 1</a> <br>
+                    <a class="Nav-Links" href="https://beginnersbook.com/2013/03/constructors-in-java/">Page 2</a> <br>
+                    <a class="Nav-Links" href="https://beginnersbook.com/2013/04/java-static-class-block-methods-variables/">Page 3</a> <br>
+                    <a class="Nav-Links" href="https://beginnersbook.com/2013/03/inheritance-in-java/">Page 4</a> <br>
+                    <a class="Nav-Links" href="https://beginnersbook.com/2013/05/java-inheritance-types/">Page 5</a> <br>
+                </div>
+                <div class="Content-box">
+                        <h2>Java – Static Class, Block, Methods and Variables</h2> 
+                        <p>BY CHAITANYA SINGH | FILED UNDER: <a href="https://beginnersbook.com/2013/04/oops-concepts/">OOPS CONCEPT</a></p>
+                        Static keyword can be used with class, variable, method and block. Static members belong to the class instead of a specific instance, this means if you make a member static, you can access it without object. Let’s take an example to understand this:
+                        
+                        <br>
+
+                        Here we have a static method myMethod(), we can call this method without any object because when we make a member static it becomes class level. If we remove the static keyword and make it non-static then we must need to create an object of the class in order to call it.
+
+                        Static members are common for all the instances(objects) of the class but non-static members are separate for each instance of class.
+
+                        <pre>
+                        class SimpleStaticExample
+                        {
+                            // This is a static method
+                            static void myMethod(){
+                                System.out.println("myMethod");
+                            }
+                        
+                            public static void main(String[] args){
+                                myMethod();
+                            }
+                        }
+                        </pre>
+                        Output:  myMethod
+                </div>
+            </div>
+        </div>        
+    </body>
+</html>

@@ -1,0 +1,26 @@
+img {
+    height: 500px;
+    width: 500px;
+    margin: 30px;
+}
+
+.Container {
+    width: auto;
+    height: auto;
+    vertical-align: top;
+}
+
+#Info {
+    display: inline-block;
+    height: auto;
+    width: auto;
+    vertical-align: top;
+    margin: 30px;
+}
+
+.ImageMap {
+    display: inline-block;
+    height: auto;
+    width: auto;
+    vertical-align: top;
+}
