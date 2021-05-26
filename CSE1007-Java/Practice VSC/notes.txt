@@ -1,0 +1,7 @@
+list -> array list, linked list
+hashmap -> key value pairs
+
+array list -> no stack and queue operations
+linked list -> stack and queue operations
+
+Q: why is Integer not resolving into a type?
