@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19BCE0977 Q2</title>
+</head>
+
+<body>
+    <form action="2.php" method="POST" id="q2">
+        <table>
+            <tr>
+                <td>Full Name</td>
+                <td><input type="text" name="full-name" id="full-name"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="pwd" id="pwd"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Unknown</label>
+                </td>
+                <td id="gen-inc"></td>
+            </tr>
+            <tr>
+                <td>Date of Birth</td>
+                <td><input type="date" placeholder="mm/dd/yyyy" name="dob" id="dob"></td>
+            </tr>
+            <tr>
+                <td>Education</td>
+                <td>
+                    <input type="checkbox" id="ug" name="edu[]" value="UG">
+                    <label for="ug">UG</label><br>
+                    <input type="checkbox" id="pg" name="edu[]" value="PG">
+                    <label for="pg">PG</label><br>
+                    <input type="checkbox" id="prof" name="edu[]" value="Professional">
+                    <label for="prof">Professional</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="sub" id="register" value="Go"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
