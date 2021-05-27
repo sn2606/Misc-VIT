@@ -1,0 +1,300 @@
+
+SQL*Plus: Release 11.2.0.2.0 Production on Sun Jul 19 11:11:14 2020
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+SQL> connect
+Enter user-name: system
+Enter password:
+Connected.
+SQL> commit
+  2  ;
+
+Commit complete.
+
+SQL> set autocommit on;
+SQL> create table student_1(regno varchar2(10), name varchar2(20), dob date, registration timestamp, cgpa number(4,2));
+
+Table created.
+
+SQL> insert into student_name values('19BCE0030','Ram', '12-jul-2001', '13-jul-2020 10:20:36PM',9.25);
+insert into student_name values('19BCE0030','Ram', '12-jul-2001', '13-jul-2020 10:20:36PM',9.25)
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> insert into student_1 values('19BCE0030','Ram', '12-jul-2001', '13-jul-2020 10:20:36PM',9.25);
+
+1 row created.
+
+Commit complete.
+SQL> insert into student_name values('&regno','&name', '&dob','&registration', &cgpa);
+Enter value for regno: 19BCE0977
+Enter value for name: Swaranjana
+Enter value for dob: 26-jun-2002
+Enter value for registration: 13-jul-2020 10:20:36PM
+Enter value for cgpa: 9.63
+old   1: insert into student_name values('&regno','&name', '&dob','&registration', &cgpa)
+new   1: insert into student_name values('19BCE0977','Swaranjana', '26-jun-2002','13-jul-2020 10:20:36PM', 9.63)
+insert into student_name values('19BCE0977','Swaranjana', '26-jun-2002','13-jul-2020 10:20:36PM', 9.63)
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> insert into student_1 values('&regno','&name', '&dob','&registration', &cgpa);
+Enter value for regno: 19BCE0977
+Enter value for name: Swaranjana
+Enter value for dob: 26-jun-2002
+Enter value for registration: 13-jul-2020 10:20:36PM
+Enter value for cgpa: 9.63
+old   1: insert into student_1 values('&regno','&name', '&dob','&registration', &cgpa)
+new   1: insert into student_1 values('19BCE0977','Swaranjana', '26-jun-2002','13-jul-2020 10:20:36PM', 9.63)
+
+1 row created.
+
+Commit complete.
+SQL> /
+Enter value for regno: 19BME0400
+Enter value for name: Mrunmayi
+Enter value for dob: 31-mar-2001
+Enter value for registration: 13-jul-2020 10:20:36PM
+Enter value for cgpa: 9.50
+old   1: insert into student_1 values('&regno','&name', '&dob','&registration', &cgpa)
+new   1: insert into student_1 values('19BME0400','Mrunmayi', '31-mar-2001','13-jul-2020 10:20:36PM', 9.50)
+
+1 row created.
+
+Commit complete.
+SQL> /
+Enter value for regno: 19BCI0005
+Enter value for name: Jahnavi
+Enter value for dob: 03-aug-2001
+Enter value for registration: 13-jul-2020 10:20:36PM
+Enter value for cgpa: 9.34
+old   1: insert into student_1 values('&regno','&name', '&dob','&registration', &cgpa)
+new   1: insert into student_1 values('19BCI0005','Jahnavi', '03-aug-2001','13-jul-2020 10:20:36PM', 9.34)
+
+1 row created.
+
+Commit complete.
+SQL> /
+Enter value for regno: 19BDS0002
+Enter value for name: Avani
+Enter value for dob: 18-Jan-2002
+Enter value for registration: 13-jul-2020 10:20:36PM
+Enter value for cgpa: 9.88
+old   1: insert into student_1 values('&regno','&name', '&dob','&registration', &cgpa)
+new   1: insert into student_1 values('19BDS0002','Avani', '18-Jan-2002','13-jul-2020 10:20:36PM', 9.88)
+
+1 row created.
+
+Commit complete.
+SQL> /
+Enter value for regno: 19BCE0001
+Enter value for name: Shravani
+Enter value for dob: 10-Oct-2002
+Enter value for registration: 14-jul-2020 11:36:45PM
+Enter value for cgpa: 9.54
+old   1: insert into student_1 values('&regno','&name', '&dob','&registration', &cgpa)
+new   1: insert into student_1 values('19BCE0001','Shravani', '10-Oct-2002','14-jul-2020 11:36:45PM', 9.54)
+
+1 row created.
+
+Commit complete.
+SQL> /
+Enter value for regno: 19BCE0028
+Enter value for name: Smityani
+Enter value for dob: 10-nov-2002
+Enter value for registration: 14-jul-2020 11:36:45PM
+Enter value for cgpa: 9.59
+old   1: insert into student_1 values('&regno','&name', '&dob','&registration', &cgpa)
+new   1: insert into student_1 values('19BCE0028','Smityani', '10-nov-2002','14-jul-2020 11:36:45PM', 9.59)
+
+1 row created.
+
+Commit complete.
+SQL> /
+Enter value for regno: 19BCT0059
+Enter value for name: Sanjay
+Enter value for dob: 23-oct-2003
+Enter value for registration: 14-jul-2020 11:36:45PM
+Enter value for cgpa: 9.77
+old   1: insert into student_1 values('&regno','&name', '&dob','&registration', &cgpa)
+new   1: insert into student_1 values('19BCT0059','Sanjay', '23-oct-2003','14-jul-2020 11:36:45PM', 9.77)
+
+1 row created.
+
+Commit complete.
+SQL> select * from student_1
+  2  ;
+
+REGNO      NAME                 DOB
+---------- -------------------- ---------
+REGISTRATION
+---------------------------------------------------------------------------
+      CGPA
+----------
+19BCE0030  Ram                  12-JUL-01
+13-JUL-20 10.20.36.000000 PM
+      9.25
+
+19BCE0977  Swaranjana           26-JUN-02
+13-JUL-20 10.20.36.000000 PM
+      9.63
+
+REGNO      NAME                 DOB
+---------- -------------------- ---------
+REGISTRATION
+---------------------------------------------------------------------------
+      CGPA
+----------
+
+19BME0400  Mrunmayi             31-MAR-01
+13-JUL-20 10.20.36.000000 PM
+       9.5
+
+19BCI0005  Jahnavi              03-AUG-01
+13-JUL-20 10.20.36.000000 PM
+
+REGNO      NAME                 DOB
+---------- -------------------- ---------
+REGISTRATION
+---------------------------------------------------------------------------
+      CGPA
+----------
+      9.34
+
+19BDS0002  Avani                18-JAN-02
+13-JUL-20 10.20.36.000000 PM
+      9.88
+
+19BCE0001  Shravani             10-OCT-02
+
+REGNO      NAME                 DOB
+---------- -------------------- ---------
+REGISTRATION
+---------------------------------------------------------------------------
+      CGPA
+----------
+14-JUL-20 11.36.45.000000 PM
+      9.54
+
+19BCE0028  Smityani             10-NOV-02
+14-JUL-20 11.36.45.000000 PM
+      9.59
+
+
+REGNO      NAME                 DOB
+---------- -------------------- ---------
+REGISTRATION
+---------------------------------------------------------------------------
+      CGPA
+----------
+19BCT0059  Sanjay               23-OCT-03
+14-JUL-20 11.36.45.000000 PM
+      9.77
+
+
+8 rows selected.
+
+SQL> select * from student_1;
+
+REGNO      NAME                 DOB
+---------- -------------------- ---------
+REGISTRATION
+---------------------------------------------------------------------------
+      CGPA
+----------
+19BCE0030  Ram                  12-JUL-01
+13-JUL-20 10.20.36.000000 PM
+      9.25
+
+19BCE0977  Swaranjana           26-JUN-02
+13-JUL-20 10.20.36.000000 PM
+      9.63
+
+REGNO      NAME                 DOB
+---------- -------------------- ---------
+REGISTRATION
+---------------------------------------------------------------------------
+      CGPA
+----------
+
+19BME0400  Mrunmayi             31-MAR-01
+13-JUL-20 10.20.36.000000 PM
+       9.5
+
+19BCI0005  Jahnavi              03-AUG-01
+13-JUL-20 10.20.36.000000 PM
+
+REGNO      NAME                 DOB
+---------- -------------------- ---------
+REGISTRATION
+---------------------------------------------------------------------------
+      CGPA
+----------
+      9.34
+
+19BDS0002  Avani                18-JAN-02
+13-JUL-20 10.20.36.000000 PM
+      9.88
+
+19BCE0001  Shravani             10-OCT-02
+
+REGNO      NAME                 DOB
+---------- -------------------- ---------
+REGISTRATION
+---------------------------------------------------------------------------
+      CGPA
+----------
+14-JUL-20 11.36.45.000000 PM
+      9.54
+
+19BCE0028  Smityani             10-NOV-02
+14-JUL-20 11.36.45.000000 PM
+      9.59
+
+
+REGNO      NAME                 DOB
+---------- -------------------- ---------
+REGISTRATION
+---------------------------------------------------------------------------
+      CGPA
+----------
+19BCT0059  Sanjay               23-OCT-03
+14-JUL-20 11.36.45.000000 PM
+      9.77
+
+
+8 rows selected.
+
+SQL> alter table student_1 drop column registration;
+
+Table altered.
+
+SQL> select * from student_1;
+
+REGNO      NAME                 DOB             CGPA
+---------- -------------------- --------- ----------
+19BCE0030  Ram                  12-JUL-01       9.25
+19BCE0977  Swaranjana           26-JUN-02       9.63
+19BME0400  Mrunmayi             31-MAR-01        9.5
+19BCI0005  Jahnavi              03-AUG-01       9.34
+19BDS0002  Avani                18-JAN-02       9.88
+19BCE0001  Shravani             10-OCT-02       9.54
+19BCE0028  Smityani             10-NOV-02       9.59
+19BCT0059  Sanjay               23-OCT-03       9.77
+
+8 rows selected.
+
+SQL> desc student_1
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ REGNO                                              VARCHAR2(10)
+ NAME                                               VARCHAR2(20)
+ DOB                                                DATE
+ CGPA                                               NUMBER(4,2)
+
+SQL>
